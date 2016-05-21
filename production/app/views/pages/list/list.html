@@ -1,0 +1,31 @@
+<div class="list-form row">
+  
+  <div class="col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
+    <h2 class="bg-primary sub-title">Add Post</h2>
+    <div class="post-nav">  
+    <a class="btn btn-default btn-outline clearfix" href="#/posts/create" ><i class="glyphicon glyphicon-plus"></i>Add new post</a>
+    <div class="post-search" data-search-model> 
+     <input type="search" name="search" id="search" placeholder="Search..."  data-ng-model="post.search" class="form-control" />
+    </div>
+    </div>
+    <div class="post-list" data-ng-if="listPosts.length > 0">
+      <div class="panel panel-default" data-ng-repeat="item in listPosts | filter:post.search">
+        <div class="panel-heading">{{item.title}}<div class="action"><a href="#/posts/edit/{{item.id}}/"> <i class="glyphicon glyphicon-edit"></i></a>
+         <a href="" ng-click="delete(item)"> <i class="glyphicon glyphicon-trash"></i></a></div></div>
+        <div class="panel-body">{{item.body}}</div>
+      </div>
+      <!-- <li>
+        <h4>{{item.title}}</h4>
+        <p>{{item.body}}</p> -->
+        <!-- <div class="info">
+          <h2 class="title">{{item.name}}</h2>
+          <ul>
+            <li><a href="#/contacts/{{item._id}}/edit">EDIT</a></li>
+            <li><a data-ng-click="delete(post);">DELETE</a></li>
+          </ul>
+        </div> -->
+      <!-- </li> -->
+    </div>
+
+  </div>
+</div>

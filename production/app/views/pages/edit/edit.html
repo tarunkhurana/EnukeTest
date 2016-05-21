@@ -1,0 +1,32 @@
+<div class="edit-form row">
+  <div class="col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
+   <h2 class="bg-primary sub-title">Edit Post</h2>      
+    <form name="postForm" autocomplete="off" role="form" novalidate  data-ng-submit="save(post)" >
+      <fieldset>
+        
+        <div class="form-group">
+          <label for="title">Enter Title</label>
+          <input type="text" name="title" data-ng-model="post.title" class="form-control" data-ng-class="{'has-error': postForm.title.$invalid && postForm.title.$dirty, 'has-success': postForm.title.$valid && postForm.title.$dirty}" required placeholder="Enter Title"/>
+          <div data-ng-if="postForm.title.$invalid && postForm.title.$dirty && !postForm.title.$focused">
+            <p class="help-block">
+              This field is required
+            </p>
+          </div>
+        </div> 
+        <div class="form-group">
+        <label for="body"> Enter Comment</label>           
+        <textarea name="body" ng-model="post.body" class="" data-ng-class="{'has-error': postForm.body.$invalid && postForm.body.$dirty, 'has-success': postForm.body.$valid && postForm.body.$dirty}" rows="10" required></textarea>
+          <div data-ng-if="postForm.body.$invalid && postForm.body.$dirty && !postForm.body.$focused">
+            <p class="help-block">
+              This field is required
+            </p>
+          </div>
+        </div>
+        <div class="form-group">         
+          <input type="submit" class="btn btn-primary btn-outline  clearfix" value="UPDATE" data-ng-disabled="postForm.title.$invalid ||
+           postForm.body.$invalid || submitform" />       
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
