@@ -1,4 +1,4 @@
-#SportsAid Website
+#Post Manager Application
 
 ***
 
@@ -26,8 +26,5 @@ Don't forget to type your password. If you can not execute with sudo, please con
 
 ***
 
-##Deployment to DEV Test
-FTP Host: waws-prod-db3-015.ftp.azurewebsites.windows.net
-FTP Username: frontend
-FTP: Pass: s4uspuPH
+
 
